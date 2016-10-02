@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="http://services.server.helloworld.soap.ws.alejopj.github.com/" xmlns:tns="http://services.server.helloworld.soap.ws.alejopj.github.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="makeMeWorldOwner" type="tns:makeMeWorldOwner"/>
+
+  <xs:element name="makeMeWorldOwnerResponse" type="tns:makeMeWorldOwnerResponse"/>
+
+  <xs:element name="sayHelloTo" type="tns:sayHelloTo"/>
+
+  <xs:element name="sayHelloToResponse" type="tns:sayHelloToResponse"/>
+
+  <xs:element name="sayHelloWorld" type="tns:sayHelloWorld"/>
+
+  <xs:element name="sayHelloWorldResponse" type="tns:sayHelloWorldResponse"/>
+
+  <xs:element name="whoIsWorldOwner" type="tns:whoIsWorldOwner"/>
+
+  <xs:element name="whoIsWorldOwnerResponse" type="tns:whoIsWorldOwnerResponse"/>
+
+  <xs:element name="worldOwner" type="tns:worldOwner"/>
+
+  <xs:complexType name="sayHelloTo">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="sayHelloToResponse">
+    <xs:sequence>
+      <xs:element name="hello" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="sayHelloWorld">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="sayHelloWorldResponse">
+    <xs:sequence>
+      <xs:element name="hello" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="whoIsWorldOwner">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="whoIsWorldOwnerResponse">
+    <xs:sequence>
+      <xs:element ref="tns:worldOwner" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="worldOwner">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="makeMeWorldOwner">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="makeMeWorldOwnerResponse">
+    <xs:sequence/>
+  </xs:complexType>
+</xs:schema>
+
